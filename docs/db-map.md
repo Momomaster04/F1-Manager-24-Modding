@@ -15,7 +15,7 @@ u32 db_size[3]           size of each SQLite database once decompressed
 - All three databases have the same 328 tables.
 - **Database 1 is the live career** (latest date in `Player_State`). Databases 2 and 3 are older snapshots of the same career. The game's purpose for them is **(unverified)**.
 - `tools/unpack.py` splits a save into `<name>_db1..3.sqlite`.
-- Repacking will need to recompress the three databases and rewrite the four u32 sizes.
+- `tools/repack.py` recompresses the three databases (zlib level 6) and rewrites the four u32 sizes. Repacking an untouched save gives a byte-identical file, so there's no checksum or other size field to update.
 
 ## Game tables
 
