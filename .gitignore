@@ -1,0 +1,10 @@
+# Local only, never committed
+CLAUDE.md
+
+# Save copies and unpacked databases
+work/
+*.sav
+*.sav.bak
+*.sqlite
+
+__pycache__/
